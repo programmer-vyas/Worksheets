@@ -1,0 +1,251 @@
+                                                       MACHINE LEARNING – WORKSHEET 2
+                                                       
+ Q1 to Q15 are subjective answer type questions, Answer them briefly.
+
+1. Give short description each of Linear, RBF, Polynomial kernels used in SVM.
+
+Ans:- SVM algorithm use  asset of mathematical functions that are defined as  the kernel. The function of kernel is to take data as input and transform it into the required form. Different SVM
+algorithms use different types  kernel functions. Some of these functions can be different types are as follows
+1) Linear
+2) Polynomial
+3) Radial basis function (RBF)
+  
+Kernel Rules:-                              
+                     K(Xn, Xi), which transforms the original data space into a new space with a higher dimension.
+                      K(Xn, Xi) = φ(Xn)φ(Xi)........................(1)
+
+
+                            N                  
+                f(Xi) = ∑ αn yn K(Xn, Xi) + b ...............................(2) 
+                           n=1
+ The aim is the data, which already transformed into a higher dimension, can be separated easily. Thus the
+hyperplane function is written in Equation (2)
+
+C = cost,     γ = gamma,      r= coefficient,   d= degree
+
+ 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                                                                                                                                                                                                                                                 
+▐                 Linear                                             ▐                              RBF                                        ▐                                 Polynomia                                                     ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   It is useful when data is Linearly separable, that is, it can be ▐  It is a general purpose kernel, used when there is no prior knowledge  ▐  It is commonly used with SVM  and other kernalized models, that represents the similarity    ▐ 
+▐   seperated using a single line. It is one of the most common      ▐  about the data. It is also called Gsasussian function.                 ▐  of vectors (training samples) in a features space over polynomial of the original variables  ▐
+▐   ernels to be used                                                ▐                                                                         ▐  allowing learning of nonlinear models.                                                       ▐ 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬                                                                                                                                                                                 
+▐   Formula:-                                                        ▐   Formula:-                                                             ▐  Formula:-                                                                                    ▐ 
+▐         K(Xn, Xi) = (Xn, Xi)                                       ▐          K(Xn, Xi) = exp( -γ ║Xn - Xi ║² + C)                           ▐        K(Xn, Xi) = ( γ (Xn, Xi) + r)ᵈ                                                         ▐ 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬ 
+▐                                                                    ▐                                                                         ▐                                                                                               ▐ 
+▐   Optimization Parameter:-  C & γ                                  ▐   Optimization Parameter:- C & γ                                        ▐  Optimization Parameter:- C, γ, r & d                                                         ▐
+▐                                                                    ▐                                                                         ▐                                                                                               ▐                                                                                                  
+▐   Optimal pair value :- C = 2 ̄ ⁵                                   ▐   Optimal pair value:-  C = 2 ̄ ¹                                        ▐  Optimal pair value :-   C = 2 ̄ ⁸                                                             ▐ 
+▐                         γ = 2 ̄ ¹º                                  ▐                         γ = 2 ̄ ³                                        ▐                          γ = 2 ̄ ¹                                                             ▐   
+▐                         r = N/A                                    ▐                         r = N/A                                         ▐                          r = 2²                                                               ▐
+▐                         d = N/A                                    ▐                         d = N/A                                         ▐                          d =  3                                                               ▐
+▐                                                                    ▐                                                                         ▐                                                                                               ▐ 
+▐    Classification error : -  0.17                                  ▐   Classification error :- 0.15                                          ▐  Classification error :- 0.12                                                                 ▐  
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬           
+
+
+ 2. R-squared or Residual Sum of Squares (RSS) which one of these two is a better measure of goodness of fit of model in regression and why?? 
+
+Ans:- R-squared is a better to measure goodness of fit of model in regression as comapair to RSS, because R-Squared is a statistical measure of fit that indicates how much variation
+of a dependent variable is explained by the independent variables in a regression model.
+
+In investing, R-squared is generally explaind as the percentage of a fund or security's movements that can be explained by movements in a benchmark index.
+
+An R-squared of 100% means that all movements of a security or dependent variable are completely explained by movements in the index or independent variable.
+         
+If R-squared values between 100-70% it means strogly correlated.When below 70% it means correlation going to break.
+
+
+3. What are TSS (Total Sum of Squares), ESS (Explained Sum of Squares) and RSS (Residual Sum of Squares) in regression. Also mention the equation relating these three metrics with each other. 
+
+Aans :- TSS :- The sum of squares total, denoted SST or TSS,  is the squared differences between the observed dependent variable and its mean. You can think of this as the dispersion of the observed
+             variables around the mean – much like the variance in descriptive statistics.
+             It is a measure of the total variability of the dataset.
+                                           n             
+                             TSS =    ∑   (yi  -   y̅ )²       
+                                           i=1
+             ESS :- The explained sum of squares (ESS) is the sum of the squares of the deviations of the predicted values from the mean value of a response variable, in a standard regression model.
+             For example, yi = a + b1x1i + b2x2i + ..., then it is the i th predicted value of the response variable.
+
+                                            n             
+                             ESS =    ∑   (ŷi  -   y̅ )²       
+                                           i=1
+
+
+             RSS:- The residual sum of squares (RSS) is the sum of the squared distances between your actual versus your predicted values and the quation is the 
+
+                                            n             
+                             RSS =    ∑   ( yi -    ŷi)²       
+                                           i=1
+Where:
+
+yi – the observed value
+ȳ – the mean value of a sample
+ŷi – the value estimated by the regression line
+
+The actual number we get depends largely on the scale of your response variable. 
+
+The relationship between the three types of sum of squares can be summarized by the following equation:
+                                    TSS = RSS + ESS
+
+4. What is Gini –impurity index?
+
+Ans:-  Gini index or Gini impurity measures the degree or probability of a particular variable being wrongly classified when it is randomly chosen.But what is actually meant by ‘impurity’
+If all the elements belong to a single class, then it can be called pure.The degree of Gini index varies between 0 and 1, where 0 denotes that all elements belong to a certain class or if there 
+exists only one class, and 1 denotes that the elements are randomly distributed across various classes. A Gini Index of 0.5 denotes equally distributed elements into some classes.
+         
+          Formula:   Gini=1-(p1,p2,p3,p4,p5..........pn)²
+
+          where:p=is the probability of an object being classified to a particular class.
+
+ 5. Are unregularized decision-trees prone to overfitting? If yes, why?
+
+Ans:- Yes, decision trees are prone to overfitting, especially when a tree is particularly deep. This is due to the amount of specificity we look at leading to smaller sample of events that meet 
+the previous assumptions. This small sample could lead to unsound conclusions.
+This is the disadvantage of the decision tree.
+
+ 6. What is an ensemble technique in machine learning? 
+
+Ans:- Ensemble learning combines the predictions from multiple models to reduce the variance of predictions and reduce generalization error. Techniques for ensemble learning
+can be grouped by the element that is varied, such as training data, the model, and how predictions are combined.
+         Type of ensemble methods is,
+           1) Bagging  
+           2) Boosting
+
+7. What is the difference between Bagging and Boosting techniques? 
+
+Ans:- Bagging and Boosting are similar in that they are both ensemble techniques, where a set of weak learners are combined to create a strong leraner that
+obtains better performance that a single one. 
+
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐                       Bagging                                            ▐                                 Boosting                                   ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   Simplest way of combining predictions that belogns to the same type.   ▐     A way of combining predictions that belong to the different types      ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   Aim to decrease variance, not bias.                                    ▐     Aim to decrease bias not variance.                                     ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   Each model is built independently.                                     ▐     New models are influenced by performance of previously built models    ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   Different training data suibsets are randomly drwan with replacement   ▐     Every new subsets contains the elements that were misclassified by     ▐
+▐   from the entire training dataset                                       ▐     previous model                                                         ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   Bagging tries to solve over-fitting probelm                            ▐     Boosting tries to reduce bias.                                         ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐   If the classifier is unstable, then apply bagging.                     ▐     If the classifier is stable and simple, then apply boosting            ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+
+8. what is out-of-bag error in random forests? 
+
+Ans:- Out of bag (OOB) score is a way of validating the Random forest model. Below is a simple intuition of how is it calculated followed by a description of how it is different 
+from validation score and where it is advantageous.
+In an ideal case, about 36.8 % of the total training data forms the OOB sample. This can be shown as follows.
+
+If there are N rows in the training data set. Then, the probability of not picking a row in a random draw is    (N-1)/N
+
+Using sampling-with-replacement the probability of not picking N rows in random draws is   ((N-1) / N)ᴺ
+          
+
+which in the limit of large N becomes equal to      lim    (1 - (1/N))ᴺ  = e ̄ ¹ = 0.368
+                                                                             N→∞
+Therefore, about 36.8 % of total training data are available as OOB sample for each DT and hence it can be used for evaluating or validating the random forest model.
+
+9. What is K-fold cross-validation? 
+
+Ans:- Cross-validation is a resampling procedure used to evaluate machine learning models on a limited data sample.
+The procedure has a single parameter called k that refers to the number of groups that a given data sample is to be split into. As such, the procedure is often called k-fold cross-validation. 
+When a specific value for k is chosen, it may be used in place of k in the reference to the model, such as k=10 becoming 10-fold cross-validation.
+
+It is a popular method because it is simple to understand and because it generally results in a less biased or less optimistic estimate of the model skill than other methods, such as a simple train/test split.
+
+The general procedure is as follows:
+
+1) Shuffle the dataset randomly.
+2) Split the dataset into k groups
+3) For each unique group:
+a) Take the group as a hold out or test data set
+b) Take the remaining groups as a training data set
+c) Fit a model on the training set and evaluate it on the test set
+d) Retain the evaluation score and discard the model
+4) Summarize the skill of the model using the sample of model evaluation scores.
+
+10. What is hyper parameter tuning in machine learning and why it is done? 
+
+Ans:- A Machine Learning model is defined as a mathematical model with a number of parameters that need to be learned from the data. By training a model with existing data, we are able to fit the model parameters.
+However, there is another kind of parameters, known as Hyperparameters, that cannot be directly learned from the regular training process. They are usually fixed before the actual training process begins. These parameters 
+express important properties of the model such as its complexity or how fast it should learn.
+
+Some examples of model hyperparameters include:
+
+1) The penalty in Logistic Regression Classifier i.e. L1 or L2 regularization
+2) The learning rate for training a neural network.
+3) The C and sigma hyperparameters for support vector machines.
+4) The k in k-nearest neighbors.
+5) The aim of this article is to explore various strategies to tune hyperparameter for Machine learning model.
+
+Models can have many hyperparameters and finding the best combination of parameters can be treated as a search problem. Two best strategies for Hyperparameter tuning are:
+
+1) GridSearchCV
+2) RandomizedSearchCV
+
+11. What issues can occur if we have a large learning rate in Gradient Descent?
+
+Ans:- Gradient Descent is an optimization algorithm used for minimizing the cost function in various machine learning algorithms. It is basically used for updating the parameters of the learning model.
+When the learning rate is too large, gradient descent can inadvertently increase rather than decrease the training error. […] When the learning rate is too small, training is not only slower, but may become
+ permanently stuck with a high training error.
+
+ 12. What is bias-variance trade off in machine learning? 
+
+Ans:- Bias:-  Bias is the difference between the average prediction of our model and the correct value which we are trying to predict. Model with high bias pays very little attention to the training data and oversimplifies the model. 
+         It always leads to high error on training and test data.
+ 
+        variance:- Variance is the variability of model prediction for a given data point or a value which tells us spread of our data. Model with high variance pays a lot of attention to training data and does not generalize on the data 
+        which it hasn’t seen before. As a result, such models perform very well on training data but has high error rates on test data.
+       
+         Bias-Variance trade off :- If our model is too simple and has very few parameters then it may have high bias and low variance. On the other hand if our model has large number of parameters then it’s going to have high variance and low bias. So we 
+         need to find the right/good balance without overfitting and underfitting the data.
+         This tradeoff in complexity is why there is a tradeoff between bias and variance. An algorithm can’t be more complex and less complex at the same time
+ 
+                                    Total error = Bias² + Variance + Irreducile error          
+
+13. What is the need of regularization in machine learning? 
+
+Ans:- Regularisation is a technique used to reduce the errors by fitting the function appropriately on the given training set and avoid overfitting.
+The commonly used regularisation techniques are :
+
+1) L1 regularisation
+2) L2 regularisation
+3) Dropout regularisation
+
+14. Differentiate between Adaboost and Gradient Boosting ?
+
+Ans:-     
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐                            Gradient boosting	                                       ▐                                     AdaBoost                                                                       ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ This approach trains learners based upon minimising the loss function of a learner   ▐ This method focuses on training upon misclassified observations. Alters the distribution of the training           ▐ 
+▐ (i.e., training on the residuals of the model)                                       ▐  dataset to increase weights on sample observations that are difficult to classify.                                ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ Weak learners are decision trees constructed in a greedy manner with split points    ▐  The weak learners incase of adaptive boosting are a very basic form of decision tree known as stumps.             ▐ 
+▐ based on purity scores (i.e., Gini, minimise loss). Thus, larger trees can be used   ▐                                                                                                                    ▐
+▐ with around 4 to 8 levels. Learners should still remain weak and so they should be   ▐                                                                                                                    ▐
+▐ constrained (i.e., the maximum number of layers, nodes, splits, leaf nodes)          ▐                                                                                                                    ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ All the learners have equal weights in the case of gradient boosting. The weight is  ▐ The final prediction is based on a majority vote of the weak learners’ predictions weighted by their               ▐
+▐ usually set as the learning rate which is small in magnitude.                        ▐ individual accuracy.                                                                                               ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ In Gradient boost "shortcomings" are identified by graidents                         ▐ In  AdaBoost "shortcomings"are identified by high-weight data points                                               ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ Gradient boost further dissect error components to bring in more explanation         ▐ Exponenetial loss of AdaBoost gives more weights for those samples fitted worse                                    ▐
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▐ Concepts of Grtdients are more general in nature                                     ▐ AdaBoost is considered as a special case of Gradient boost in terms of loss function, in which exponential losses. ▐  
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+
+15. Can we use Logistic Regression for classification of Non-Linear Data? If not, why?
+
+Ans:- Logistic Regression has traditionally been used as a linear classifier, i.e. when the classes can be separated in the feature space by linear boundaries. That can be remedied however if we happen to have a better idea as to the shape of the decision boundary.
+Logistic regression has traditionally been used to come up with a hyperplane that separates the feature space into classes. But if we suspect that the decision boundary is nonlinear we may get better results by attempting some nonlinear functional forms for the logit
+ function.
