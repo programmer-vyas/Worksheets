@@ -1,0 +1,127 @@
+                                        SQL WORKSHEET-2
+
+Refer the following ERD and answer all the questions in this worksheet. You have to write the queries using mysql for the required Operation.
+* Customers: stores customer's data.
+* Products: stores a list of scale model cars.
+* ProductLines: stores a list of product line categories.
+* Orders: stores sales orders placed by customers.
+* OrderDetails: stores sales order line items for each sales order.
+* Payments: stores payments made by customers based on their accounts.
+* Employees: stores all employee information as well as the organization structure such as who reports to whom.
+* Offices: stores sales office data.
+
+1. Write SQL query to create table Customers.
+Ans:-
+ Create table Customers(
+ CustomerNumber int not null,
+ CustomerName varchar(30) not null,
+ ContactLastName varchar(30) not null,
+ ContactFirstNAme varchar(30) not null,
+ Phone int not null,
+ AddressLine1 varchar(30)  not null,
+ AddressLine2 varchar(30),
+ City varchar(30) not null,
+ State varchar(30) not null,
+ PostalCode int not null,
+ Country varchar(30) not null,
+ SalesRepEmployeeNumber int not null,
+ CreditLimt int not null,
+ primary key (CustomerNumber),
+ foreign key (SalesRepEmployeeNumber) references  Employees(EmployeeNumber));
+
+
+2. Write SQL query to create table Orders.
+Ans:-
+ create table Orders(
+ OrderNumber Varchar(30) not null primary key,
+ OrderDate date not null,
+ RequiredDate date not null,
+ ShippedDate date not null,
+ Stat varchar(10) not null,
+ Comments varchar(30) not null,
+ CustomerNumber int not null,
+ foreign key ( CustomerNumber) references  Customers(CustomerNumber));
+ 
+3. Write SQL query to show all the columns data from the Orders Table.
+Ans:-
+ SELECT * FROM ORDERS;
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ Field          ▌ Type         ▌ Null ▌ Key ▌ Default ▌ Extra ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ orderNumber    ▌ int          ▌ NO   ▌ PRI ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ orderDate      ▌ date         ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ requiredDate   ▌ date         ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ shippedDate    ▌ date         ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ status         ▌ char(5)      ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ comments       ▌ varchar(100) ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+▌ customerNumber ▌ int          ▌ YES  ▌     ▌ NULL    ▌       ▌
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+
+
+4. Write SQL query to show all the comments from the Orders Table.
+
+Ans:- SELECT Comments FROM orders;
+
+
+5. Write a SQL query to show orderDate and Total number of orders placed on that date, from Orders table.
+
+Ans:- SELECT orderdate as dates, count(orderNumber) as no_of_order from Orders group by dates;
+
+
+6. Write a SQL query to show employeNumber, lastName, firstName of all the employees from employees table.
+
+Ans:- SELECT  EmployeeNumber, LastName, FirstName FROM Employees;
+
+
+7. Write a SQL query to show all orderNumber, customerName of the person who placed the respective order.
+
+Ans:- SELECT Ordernumber, Customernumber FROM ORDERS;
+
+
+8. Write a SQL query to show name of all the customers in one column and salerepemployee name in another column.
+
+Ans:- SELECT customerName,salesRepEmployeeNumber from Customers;
+
+
+9. Write a SQL query to show Date in one column and total payment amount of the payments made on that date from the payments table.
+
+Ans:- SELECT paymentDate as PaidOn, amount from payments group by PaidOn order by PaidOn asc;
+
+
+10. Write a SQL query to show all the products productName, MSRP, productDescription from the products table.
+
+Ans:- SELECT ProductName, MSRP, ProductDescription FROM Products;
+
+
+11. Write a SQL query to print the productName, productDescription of the most ordered product.
+
+Ans:- productName,productDescription,max(quantityOrdered) from products,orderdetails where products.productcode=orderdetails.productcode;
+
+
+12. Write a SQL query to print the city name where maximum number of orders were placed.
+
+ Ans:- SELECT ProductName,max(QuantityOrdered) from Products,Orderdetails where Products.productcode =  Orderdetails.productcode;
+
+
+13. Write a SQL query to get the name of the state having maximum number of customers.
+
+Ans:- SELECT state,count(customerNumber) from customers  group by state order by count(customerNumber) desc limit 1;
+
+
+
+14. Write a SQL query to print the employee number in one column and Full name of the employee in the second column for all the employees.
+Ans:- SELECT EmployeeNumber, concat(FirstName," ",Lastname) as Full_name   from Employees;
+
+
+15. Write a SQL query to print the orderNumber, customer Name and total amount paid by the customer for that order (quantityOrdered � priceEach).
+
+Ans:- SELECT Orders.OrderNumber, Customers.CustomerName, orderdetails.QuantityOrdered*orderdetails.PriceEach as amount_paid
+	from((Orders 
+	inner join Customers on Orders.CustomerNumber=customers.CustomerNumber)
+inner join orderdetails on Orders.OrderNumber=orderdetails.OrderNumber);
