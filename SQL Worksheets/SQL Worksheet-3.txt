@@ -37,6 +37,8 @@ For Questions 6-13 refer to the below diagram and answer the questions:
 
 Ans:- B) Foreign Key
 
+For Questions 6-13 refer to the below diagram and answer the questions:
+
 6. How many foreign keys are there in the Supplier table?
 A) 0 B) 3
 C) 2 D) 1
