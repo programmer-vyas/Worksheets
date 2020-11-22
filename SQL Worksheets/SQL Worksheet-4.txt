@@ -1,0 +1,81 @@
+                      SQL – WORKSHEET 4
+
+1. Write SQL query to show average number of orders shipped in a day (use Orders table).
+
+Ans:- SELECT ordernumber, shippeddate FROM Orders WHERE ordernumber = (SELECT avg(ordernumber) FROM Orders);
+
+
+2. Write SQL query to show average number of orders placed in a day.
+
+Ans:- SELECT ordernumber, orderdate FROM Orders WHERE ordernumber = (SELECT avg(ordernumber) FROM Orders);
+
+
+3. Write SQL query to show the product name with minimum MSRP (use Products table).
+
+Ans:- SELECT productname, MSRP FROM Products WHERE MSRP = (SELECT MIN(MSRP) FROM Products);
+
+
+4. Write SQL query to show the product name with maximum value of stockQuantity.
+
+Ans:- SELECT productname, quantityinstock FROM Products WHERE quantityinstock = (SELECT MAX(quantityinstock) FROM Products);
+
+
+5. Write a query to show the most ordered product Name (the product with maximum number of orders).
+
+Ans:- SELECT productName, COUNT(DISTINCT productCode) FROM Products GROUP BY productName ORDER BY 2 DESC;
+
+
+6. Write a SQL query to show the highest paying customer Name.
+
+Ans:- SELECT * Top 1 customername from customers join payements on customers.customernumber=payments.customernumber group by customername order by count(*) DESC;
+
+
+7. Write a SQL query to show cutomerNumber, customerName of all the customers who are from Melbourne city.
+
+Ans:- SELECT cutomerNumber, customerName FROM Customers WHERE city= 'Melbourne city';
+
+
+8. Write a SQL query to show name of all the customers whose name start with “N”.
+WORKSHEET
+
+Ans:- SELECT * FROM Customers WHERE customername LIKE 'N%';
+
+
+9. Write a SQL query to show name of all the customers whose phone start with ‘^7.*’ and are from city ‘Las
+Vegas’.
+
+Ans:- SELECT * customerName FROM Customers WHERE city= 'Las Vegas'and WHERE phone=‘^7*’ ;
+
+
+10. Write a SQL query to show name of all the customers whose creditLimit < 1000 and city is either “Las Vegas”
+or ”Nantes” or “Stavern”.
+
+Ans:- SELECT  customername from Customer where creditlimit>1000 and city=' “Las Vegas”or ”Nantes” or “Stavern” ;
+
+
+11. Write a SQL query to show all the orderNumber in which quantity ordered <10.
+
+Ans:- SELECT  ordernumber from Orderdetails where quantityorderd < 10 ;
+
+
+12. Write a SQL query to show all the orderNumber whose customer Name start with letter N.
+
+Ans:- SELECT ordernumber from Orders join Customers on customers.customernumber=ordernumber.customernumber WHERE customername LIKE 'N%' ;
+
+
+13. Write a SQL query to show all the customerName whose orders are “Disputed” in status.
+
+Ans:- SELECT ordernumber from Orders join Customers on customers.customernumber=status.customernumber WHERE (status = "Denied") ;
+
+
+14. Write a SQL query to show the customerName who made payment through cheque with checkNumber starting
+with H and made payment on “2004-10-19”.
+
+Ans:- SELECT customerName from customers
+      inner join payments on customers.customerNumber = payments.customerNumber
+      where payments.checkNumber = True; 
+
+
+15. Write a SQL query to show all the checkNumber whose amount > 1000.
+
+Ans:- SELECT checkNumber  FROM Payments WHERE amount > 1000;
