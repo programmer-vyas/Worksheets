@@ -1,0 +1,94 @@
+                      SQL – WORKSHEET 5
+
+1. Write SQL query to show all the data in the Movie table.
+
+Ans:- SELECT * FROM movie
+
+2. Write SQL query to show the title of the longest runtime movie.
+
+Ans:- SELECT runtime FROM movie WHERE ((movie.movie_ID)=[MovieGenre].[Movie]) GROUP BY tblMovie.runtime;
+
+3. Write SQL query to show the highest revenue generating movie title.
+
+Ans:- SELECT revenue  FROM movie WHERE revenue ("highest revenue")
+
+4. Write SQL query to show the movie title with maximum value of revenue/budget.
+
+Ans:- SELECT title  FROM movie WHERE revenue ("highest revenue")
+
+5. Write a SQL query to show the movie title and its cast details like name of the person, gender, character name, cast order.
+
+Ans:- SELECT title  FROM movie WHERE cast_details(person, gender, character name, cast order.);
+
+6. Write a SQL query to show the country name where maximum number of movies has been produced, along with the number of movies produced.
+
+Ans:- SELECT title, rating FROM movies INNER JOIN boxoffice  ON movies.id = boxoffice.movie_id ORDER BY rating DESC;
+
+
+7. Write a SQL query to show all the genre_id in one column and genre_name in second column.
+
+Ans:- SELECT movies.*, genres.name FROM movies INNER JOIN genres_in_movies ON genres_in_movies.movie_id = movies.id INNER JOIN genres ON genres_in_movies.genre_id = genres.id GROUP BY movies.title;
+
+
+8. Write a SQL query to show name of all the languages in one column and number of movies in that particular column in another column.
+
+Ans:- SELECT dir_fname,dir_lname, gen_title,count(gen_title)
+FROM director
+NATURAL JOIN movie_direction
+NATURAL JOIN movie_genres
+NATURAL JOIN genres
+GROUP BY dir_fname, dir_lname,gen_title
+ORDER BY dir_fname,dir_lname;
+
+
+9. Write a SQL query to show movie name in first column, no. of crew members in second column and number of cast members in third column.
+
+Ans:- SELECT mov_title, mov_year, gen_title, dir_fname, dir_lname
+FROM movie
+NATURAL JOIN movie_genres
+NATURAL JOIN genres
+NATURAL JOIN movie_direction
+NATURAL JOIN director;
+
+
+10. Write a SQL query to list top 10 movies title according to popularity column in decreasing order.
+
+Ans:- SELECT movie.mov_title, mov_year, mov_dt_rel,
+       mov_time,dir_fname, dir_lname 
+FROM movie
+JOIN  movie_direction 
+   ON movie.mov_id = movie_direction.mov_id
+JOIN director 
+   ON movie_direction.dir_id=director.dir_id
+WHERE mov_dt_rel <'01/01/1989'
+ORDER BY mov_dt_rel desc;
+
+11. Write a SQL query to show the name of the 3rd most revenue generating movie and its revenue
+
+Ans:- SELECT  title as MovieName, revenue  from (select * from movie order by revenue desc limit 3);
+
+12. Write a SQL query to show the names of all the movies which have “rumoured” movie status.
+
+Ans:- SELECT title as MovieName FROM movie  
+WHERE movie_id = (SELECT movie_id  FROM movie WHERE movie_status = ' rumoured ' );
+
+
+13. Write a SQL query to show the name of the “United States of America” produced movie which generated
+maximum revenue.
+
+Ans:- SELECT title as MovieName ,MAX(revenue) FROM movie
+WHERE movie_id = (SELECT movie_id  FROM movie LEFT  JOIN production_country ON
+movie.movie_id= production_country.movie_id 
+LEFT JOIN country ON
+country. country _id= production_country. country _id
+WHERE country_name = ' United States of America ' );
+
+14. Write a SQL query to print the movie_id in one column and name of the production company in the second
+column for all the movies.
+
+Ans:- SELECT movie_company.movie_id,production_company.company_name FROM movie_company RIGHTJOIN production_company ON
+movie_company.company_id= production_company.company_id;
+
+15. Write a SQL query to show the title of top 20 movies arranged in decreasing order of their budget.
+
+Ans:- select title from (select * from movie order by budget desc limit 20);
